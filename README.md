@@ -13,7 +13,7 @@
 如果你现在只想让 Agent 找人、发消息，可以独立使用这个 Skill，不需要先解密数据库或部署服务：
 
 ```sh
-git clone https://github.com/ReByteAI/wechat-agent.git
+git clone https://github.com/zeroxaa/wechat-agent.git
 cd wechat-agent
 mkdir -p "$HOME/.codex/skills"
 # 目标已存在时先比较，不覆盖已有 Skill。
