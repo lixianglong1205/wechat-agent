@@ -2,6 +2,20 @@
 
 本 Skill 可完整复制到 `~/.codex/skills/wechat-desktop`，不依赖作者的其他 Skill 或数据库。需要 macOS、Xcode Command Line Tools（含 Swift）、Python 3.12+、已登录且可见的微信。源代码在 `scripts/swift/`。已实测版本见仓库验证记录；其他版本先编译和检查。
 
+从公开仓库安装到 Codex：
+
+```sh
+git clone https://github.com/zeroxaa/wechat-agent.git
+cd wechat-agent
+mkdir -p "$HOME/.codex/skills"
+# 目标已存在时先比较，不覆盖已有 Skill。
+test ! -e "$HOME/.codex/skills/wechat-desktop" && \
+  cp -R skills/wechat-desktop "$HOME/.codex/skills/wechat-desktop"
+cd "$HOME/.codex/skills/wechat-desktop"
+```
+
+其他支持文件型 Skill 的 Agent 按各自约定调整安装目录，保留整个 Skill 文件夹。
+
 在 Skill 目录运行：
 
 ```sh
