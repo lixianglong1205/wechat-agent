@@ -101,7 +101,13 @@ The decrypted databases still use WeChat's own schema. Add an import step that o
 
 For every message, keep at least the sender, conversation, timestamp, message type, body, and original message ID. For contacts, keep remarks, nicknames, and WeChat IDs so the agent can distinguish people with the same display name.
 
-Deduplicate imports by message identity. Later, synchronize new messages instead of importing the entire history again. Our implementation runs on demand and exits when finished. If you want scheduled updates, add scheduling after this path works reliably.
+Deduplicate imports by message identity. Later, synchronize new messages instead of importing the entire history again. The sync command runs once and exits.
+
+**Once manual synchronization works, set it to run every hour.** You can ask your local Codex or Claude to configure a task with the Mac's scheduler:
+
+> Set up a local task that synchronizes my WeChat archive every hour. Check the available message databases, import new or changed records, and reuse validated keys. If my reading service is running, update its data afterward. Prevent overlapping runs and keep a log of the last successful sync and any failures.
+
+The scheduler can run the script directly; it doesn't need to call a model every hour or keep your agent conversation open. The Mac must be awake and your user session logged in, and WeChat must remain connected to receive new messages. Missing keys should produce an error record rather than an unattended permission prompt. Schedule voice transcription separately if you want it, since that calls Gemini.
 
 ### Handling voice messages
 
