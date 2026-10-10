@@ -64,6 +64,10 @@ You'll also need a coding agent that can read local files, run commands, and ins
 
 These are test records, not versions you must install. Have your agent inspect your environment and find a matching approach.
 
+**A useful trick for keeping the version stable:** consider installing [WeChat from the Mac App Store](https://apps.apple.com/us/app/wechat/id836500024?mt=12), then turning off **Automatic Updates** under **App Store → Settings**. You can choose when to update instead of having an App Store update change a working setup unexpectedly. [Apple's instructions](https://support.apple.com/en-us/102629)
+
+That setting applies to all App Store apps, not just WeChat. It controls App Store updates; it doesn't guarantee that an old WeChat version will remain usable forever. Check the installed build and tool compatibility before updating, and back up your archive first. We're suggesting this as a way to make updates more predictable, not claiming that the App Store build has passed every test above.
+
 Also, **the history you want to read needs to be on the Mac first.** Use WeChat's own migration or synchronization features to bring over records that exist only on your phone. Decryption can read local data; it cannot recover messages or attachments that were never downloaded.
 
 ## 2. Decrypt the local WeChat databases
