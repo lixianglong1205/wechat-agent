@@ -5,7 +5,7 @@ import subprocess
 import sys
 from pathlib import PurePosixPath
 
-ROOT_FILES = {"README.md", "LICENSE", ".gitignore"}
+ROOT_FILES = {"README.md", "README.zh-CN.md", "LICENSE", ".gitignore"}
 PREFIXES = ("docs/", "diagnostics/", "skills/wechat-desktop/", "scripts/", "tests/")
 TEXT_SUFFIXES = {".md", ".py", ".swift", ".sh", ".yaml", ".yml"}
 PATTERNS = {
